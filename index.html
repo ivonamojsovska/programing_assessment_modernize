@@ -10,38 +10,81 @@
   </head>
   <body>
     <header class="header">
-      <div class="header-logo">
-        <img src="css/images/logo.png" alt="logo-image" />
-      </div>
+      <!-- header section start -->
+      <img src="css/images/logo.svg" alt="Modernize logo" />
+      <!-- header section end -->
     </header>
-    <section class="main-section">
-      <div class="main-title">
-        <p>Enter to win a 3rd generation Nest Learning Thermostat worth $249.</p>
-      </div>
-      <div class="main-form">
+    <main class="main-section">
+      <div>
+        <h1 class="main-title">
+          Enter to win a 3rd generation Nest<br />
+          Learning Thermostat worth $249.
+        </h1>
         <form>
-            <div class="form-field">
-                <input type="text" name="name" placeholder="Name" pattern=".{2,}" required>
+          <div class="form-field">
+            <!-- Name input field -->
+            <input
+              type="text"
+              name="name"
+              placeholder="Name"
+              pattern=".{2,}"
+              required
+            />
+          </div>
+          <div class="form-field location-container">
+            <div class="form-subfield_city">
+              <!-- City input field -->
+              <input type="text" name="city" placeholder="City" />
             </div>
-            <div class="form-field location-container">
-                <div class="form-subfield_city">
-                    <input type="text" name="city" placeholder="City">
-                </div>
-                <div class="form-subfield_state">
-                    <input type="text" name="state" placeholder="State">
-                </div>
+            <div class="form-subfield_state">
+              <!-- State input field -->
+              <input type="text" name="state" placeholder="State" />
             </div>
-            <div class="form-field">
-                <input id="phone-number" type="tel" name="tel" placeholder="Phone Number" required>
-            </div>
-            <div class="form-field">
-                <input type="email" name="email" placeholder="Email Address" required>
-            </div>
-            <button class="submit-button"
-            type="submit">ENTER TO WIN</button>
+          </div>
+          <div class="form-field">
+            <!-- Phone Number input field -->
+            <input
+              id="phone-number"
+              type="tel"
+              name="tel"
+              placeholder="Phone Number"
+              required
+            />
+          </div>
+          <div class="form-field">
+            <!-- Email input field -->
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              required
+            />
+          </div>
+          <button class="submit-button" type="submit">ENTER TO WIN</button>
         </form>
       </div>
-    <section>
-    <section></section>
+    </main>
+    <section class="advertorial-section">
+      <!-- Advertizing section start -->
+      <div class="advertorial-title">
+        <h1 class="title-within-border">EVEN MORE SAVINGS</h1>
+      </div>
+      <div class="advertorial-heading">
+        <h3 class="advertorial-subheading">ADVERTORIAL</h3>
+        <h2>Trick Homeowners Use to Eliminate Bills</h2>
+      </div>
+      <div>
+        <p>
+          Surging energy bills, unpredictable weather pattern and
+          dissatisfaction with utility companies have homeowners
+          scrambling...<span class="read-more"
+            ><a href="https://www.google.com/" target="_blank"
+              >READ MORE</a
+            ></span
+          >
+        </p>
+      </div>
+      <!-- Advertizing section end -->
+    </section>
   </body>
 </html>
