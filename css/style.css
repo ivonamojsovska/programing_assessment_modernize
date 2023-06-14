@@ -36,7 +36,6 @@ body {
 
 .main-section {
   max-width: 90%;
-
   margin: 1.5rem auto 3.5rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
@@ -89,6 +88,14 @@ body {
   gap: 1rem;
 }
 
+.input-city {
+  width: 70%;
+}
+
+.input-state {
+  width: 30%;
+}
+
 .submit-button {
   width: 100%;
   border: 1px solid transparent;
@@ -96,6 +103,12 @@ body {
   background-color: #f6931d;
   font-size: 1.5rem;
   color: #fff;
-  padding: 1rem 3rem;
+  padding: 1.5rem 3rem;
   cursor: pointer;
+}
+
+@media (min-width: 600px) {
+  .main-section {
+    width: 65%;
+  }
 }
