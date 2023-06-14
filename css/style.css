@@ -3,12 +3,11 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: inherit;
+  box-sizing: border-box;
 }
 
 html {
   font-size: 62.5%; /* 1rem = 10px */
-  box-sizing: border-box;
 }
 
 :root {
@@ -17,8 +16,10 @@ html {
 
 body {
   font-family: "Montserrat", sans-serif;
+  background: linear-gradient(#ecf8fb, #efefef);
   background-image: url("/css/images/background-image.png");
   background-position: cover;
+  animation: backgroundTransition 5s infinite;
 }
 
 .header {
@@ -69,12 +70,12 @@ body {
   align-items: center;
 }
 
-.form-input {
+.form-field {
   width: 100%;
   margin-bottom: 2rem;
 }
 
-.form-input input {
+.form-field input {
   width: 100%;
   padding: 1rem;
   font-family: inherit;
@@ -88,12 +89,16 @@ body {
   gap: 1rem;
 }
 
-.input-city {
+.form-subfield_city {
   width: 70%;
 }
 
-.input-state {
+.form-subfield_state {
   width: 30%;
+}
+
+form:invalid input:invalid {
+  border-color: #d50303;
 }
 
 .submit-button {
@@ -105,6 +110,16 @@ body {
   color: #fff;
   padding: 1.5rem 3rem;
   cursor: pointer;
+}
+
+@keyframes backgroundTransition {
+  0%,
+  100% {
+    background-color: #ecf8fb;
+  }
+  50% {
+    background-color: #efefef;
+  }
 }
 
 @media (min-width: 600px) {
