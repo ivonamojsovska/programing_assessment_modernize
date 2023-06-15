@@ -46,6 +46,7 @@ html {
 
 :root {
   --backround-color: #545253;
+  --green-color: #a0bc57;
 }
 
 body {
@@ -59,6 +60,11 @@ body,
 button,
 input {
   font-family: "Montserrat", sans-serif;
+  color: #545253;
+}
+
+.border-error {
+  border-color: red;
 }
 
 .header {
@@ -75,8 +81,7 @@ input {
 }
 
 .main-section {
-  width: 90%;
-  margin: 1.5rem auto;
+  margin: 1.5rem 1.5rem 3.5rem;
   box-shadow: 0 7px 14px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -130,10 +135,6 @@ form {
   width: 30%;
 }
 
-/* form:invalid input:invalid {
-  border-color: #d50303;
-} */
-
 .submit-button {
   width: 100%;
   max-width: 33.3rem;
@@ -149,11 +150,16 @@ form {
 .advertorial-section {
   width: 90%;
   margin: 0 auto;
+  border: 2px solid var(--green-color);
+  border-top: none;
 }
 
 .title-within-border {
   position: relative;
   text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+  top: -0.9rem;
 }
 
 .title-within-border::before,
@@ -161,17 +167,47 @@ form {
   content: "";
   position: absolute;
   top: 50%;
-  width: 30%;
-  height: 1px;
-  background-color: green;
+  width: 20%;
+  height: 2px;
+  background-color: var(--green-color);
 }
 
 .title-within-border::before {
-  left: 0;
+  left: -2px;
 }
 
 .title-within-border::after {
-  right: 0;
+  right: -2px;
+}
+
+.advertorial-subheading {
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: var(--green-color);
+}
+
+.advertorial-heading {
+  font-weight: 300;
+  line-height: 2.4rem;
+  font-size: 2rem;
+}
+
+.advertorial-content {
+  padding: 1.5rem;
+  margin: 1.5rem;
+  margin-top: 0;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.advertorial-content p {
+  font-size: 1.4rem;
+  font-weight: 300;
+  line-height: 1.8rem;
+  padding: 1.5rem 0;
+}
+
+.read-more a {
+  color: #6eb7c2;
 }
 
 @keyframes backgroundTransition {
@@ -184,12 +220,32 @@ form {
   }
 }
 
-@media (min-width: 600px) {
+@media (min-width: 767px) {
   .main-section {
-    width: 65%;
+    max-width: 65%;
+    margin: 3.5rem auto 4rem;
   }
 
   .advertorial-section {
-    width: 65%;
+    width: 45%;
+  }
+
+  .advertorial-content {
+    margin: 0 2rem 2rem;
+  }
+}
+
+@media (min-width: 1440px) {
+  .main-section {
+    max-width: 45%;
+  }
+
+  .advertorial-section {
+    max-width: 30%;
+  }
+
+  .title-within-border::before,
+  .title-within-border::after {
+    width: 25%;
   }
 }
