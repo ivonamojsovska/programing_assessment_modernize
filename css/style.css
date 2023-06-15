@@ -28,8 +28,6 @@
   font-display: swap;
 }
 
-/* Add utility classes */
-
 * {
   margin: 0;
   padding: 0;
@@ -45,8 +43,10 @@ html {
 }
 
 :root {
-  --backround-color: #545253;
-  --green-color: #a0bc57;
+  --color-grey: #545253;
+  --color-green: #a0bc57;
+  --color-btn: #f6931d;
+  --color-white: #fff;
 }
 
 body {
@@ -60,12 +60,12 @@ body,
 button,
 input {
   font-family: "Montserrat", sans-serif;
-  color: #545253;
+  color: var(--color-grey);
 }
 
 .header {
   height: 8rem;
-  background-color: var(--backround-color);
+  background-color: var(--color-grey);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -82,8 +82,8 @@ input {
 }
 
 .main-title {
-  background-color: var(--backround-color);
-  color: #fff;
+  background-color: var(--color-grey);
+  color: var(--color-white);
   padding: 1.6rem 2rem;
   line-height: 2.4rem;
   text-align: center;
@@ -91,7 +91,7 @@ input {
 }
 
 form {
-  background-color: #fff;
+  background-color: var(--color-white);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -136,16 +136,16 @@ form {
   max-width: 33.3rem;
   border: 1px solid transparent;
   border-radius: 100px;
-  background-color: #f6931d;
+  background-color: var(--color-btn);
   font-size: 1.5rem;
-  color: #fff;
+  color: var(--color-white);
   padding: 1.5rem;
   cursor: pointer;
 }
 
 .advertorial-section {
   margin: 0 1.5rem;
-  border: 2px solid var(--green-color);
+  border: 2px solid var(--color-green);
   border-top: none;
 }
 
@@ -164,7 +164,7 @@ form {
   top: 50%;
   width: 20%;
   height: 2px;
-  background-color: var(--green-color);
+  background-color: var(--color-green);
 }
 
 .title-within-border::before {
@@ -178,7 +178,7 @@ form {
 .advertorial-subheading {
   font-size: 1.2rem;
   line-height: 1.5rem;
-  color: var(--green-color);
+  color: var(--color-green);
 }
 
 .advertorial-heading {
