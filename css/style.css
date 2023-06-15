@@ -63,12 +63,8 @@ input {
   color: #545253;
 }
 
-.border-error {
-  border-color: red;
-}
-
 .header {
-  height: 8rem; /* leave a comm why fixed height */
+  height: 8rem;
   background-color: var(--backround-color);
   display: flex;
   justify-content: center;
@@ -148,8 +144,7 @@ form {
 }
 
 .advertorial-section {
-  width: 90%;
-  margin: 0 auto;
+  margin: 0 1.5rem;
   border: 2px solid var(--green-color);
   border-top: none;
 }
@@ -227,7 +222,8 @@ form {
   }
 
   .advertorial-section {
-    width: 45%;
+    max-width: 45%;
+    margin: 0 auto;
   }
 
   .advertorial-content {
@@ -241,7 +237,7 @@ form {
   }
 
   .advertorial-section {
-    max-width: 30%;
+    max-width: 35%;
   }
 
   .title-within-border::before,
