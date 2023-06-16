@@ -76,6 +76,12 @@ form.addEventListener('submit', (e) => {
         // Collect form data
         const formData = new FormData(form);
 
+        // Reset the form 
+        //form.reset()
+        // Change button text to "Submitted"
+        //submitButton.textContent = 'SUBMITTED';
+        //submitButton.disabled = true; // Disable the button to prevent further submissions
+
 
         // Make a POST request to the server
         fetch('https://formsws-hilstaging-com-0adj9wt8gzyq.runscope.net/solar ', {
