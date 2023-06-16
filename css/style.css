@@ -50,10 +50,15 @@ html {
   --color-input-border: #d8d8d8;
   --color-placeholder: #747375;
   --color-read-more: #6eb7c2;
+  --color-transition-primary: #ecf8fb;
+  --color-transition-secondary: #efefef;
 }
 
 body {
-  background: linear-gradient(#ecf8fb, #efefef);
+  background: linear-gradient(
+    var(--color-transition-primary),
+    var(--color-transition-secondary)
+  );
   background-image: url("/css/images/background-image.png");
   background-position: cover;
   animation: backgroundTransition 5s infinite;
@@ -85,7 +90,7 @@ input {
 }
 
 .main-container {
-  margin: 1.5rem 1.5rem 3.5rem;
+  margin: 1.5rem 1.5rem 4.5rem;
   box-shadow: 0 7px 14px 0 rgba(0, 0, 0, 0.2);
 }
 
@@ -169,16 +174,18 @@ form {
   font-size: 1.5rem;
   line-height: 1.5rem;
   top: -0.9rem;
+  z-index: 1;
 }
 
 .title-within-border::before,
 .title-within-border::after {
   content: "";
   position: absolute;
-  top: 50%;
+  top: 47%;
   width: 20%;
   height: 2px;
   background-color: var(--color-green);
+  z-index: 0;
 }
 
 .title-within-border::before {
@@ -222,16 +229,16 @@ form {
 @keyframes backgroundTransition {
   0%,
   100% {
-    background-color: #ecf8fb;
+    background-color: var(--color-transition-primary);
   }
   50% {
-    background-color: #efefef;
+    background-color: var(--color-transition-secondary);
   }
 }
 
 @media (min-width: 767px) {
-  .main-section {
-    margin: 3.5rem auto 4rem;
+  .main-container {
+    margin: 3.5rem auto 4.5rem;
   }
 
   .advertorial-content {
