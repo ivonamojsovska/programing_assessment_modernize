@@ -5,7 +5,7 @@ const form = document.querySelector('form')
 const submitButton = document.querySelector('.submit-button');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
-const borderColorError = '#D50303'
+const borderInputError = '#D50303'
 
 
 ////US mask phone number////
@@ -27,29 +27,29 @@ form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     // Reset error styles
-    nameInput.style.borderColor = '';
-    phone.style.borderColor = '';
-    emailInput.style.borderColor = '';
+    nameInput.style.borderColor = ''
+    phone.style.borderColor = ''
+    emailInput.style.borderColor = ''
 
     // Perform form validation
     let hasError = false;
 
 
     if (nameInput.value.length < 2) {
-        nameInput.style.borderColor = borderColorError;
+        nameInput.style.borderColor = borderInputError;
         hasError = true;
     }
 
     const phoneRegex = /^\(\d{3}\) \d{3}-\d{4}$/;
     if (!phoneRegex.test(phone.value)) {
-        phone.style.borderColor = borderColorError;
+        phone.style.borderColor = borderInputError;
         hasError = true;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(emailInput.value)) {
-        console.log(emailInput.value, 'email has to have @')
-        emailInput.style.borderColor = borderColorError;
+        console.log(emailInput.value, 'error in the email field')
+        emailInput.style.borderColor = borderInputError;
         hasError = true;
     }
 
@@ -60,6 +60,7 @@ form.addEventListener('submit', (e) => {
 
     // Submit the form if there are no errors
     if (!hasError) {
+
         // Collect form data
         const formData = new FormData(form);
 
