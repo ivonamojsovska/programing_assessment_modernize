@@ -5,7 +5,11 @@ const form = document.querySelector('form')
 const submitButton = document.querySelector('.submit-button');
 const nameInput = document.getElementById('name');
 const emailInput = document.getElementById('email');
+const nameError = document.getElementById('name-error')
+const phoneError = document.getElementById('phone-error')
+const emailError = document.getElementById('email-error')
 const borderInputError = '#D50303'
+
 
 
 ////US mask phone number////
@@ -28,8 +32,14 @@ form.addEventListener('submit', (e) => {
 
     // Reset error styles
     nameInput.style.borderColor = ''
+    nameError.textContent = ''
+
     phone.style.borderColor = ''
+    phoneError.textContent = ''
+
     emailInput.style.borderColor = ''
+    emailError.textContent = ''
+
 
     // Perform form validation
     let hasError = false;
@@ -37,19 +47,21 @@ form.addEventListener('submit', (e) => {
 
     if (nameInput.value.length < 2) {
         nameInput.style.borderColor = borderInputError;
+        nameError.textContent = 'Name should be at least 2 characters long'
         hasError = true;
     }
 
     const phoneRegex = /^\(\d{3}\) \d{3}-\d{4}$/;
     if (!phoneRegex.test(phone.value)) {
         phone.style.borderColor = borderInputError;
+        phoneError.textContent = 'Phone number has to have 10 digits'
         hasError = true;
     }
 
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     if (!emailRegex.test(emailInput.value)) {
-        console.log(emailInput.value, 'error in the email field')
         emailInput.style.borderColor = borderInputError;
+        emailError.textContent = 'Email example: Johndoe@domain.com'
         hasError = true;
     }
 

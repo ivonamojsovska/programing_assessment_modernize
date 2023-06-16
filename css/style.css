@@ -52,6 +52,7 @@ html {
   --color-read-more: #6eb7c2;
   --color-transition-primary: #ecf8fb;
   --color-transition-secondary: #efefef;
+  --color-error-message: #d50303;
 }
 
 body {
@@ -115,6 +116,7 @@ form {
 .form-field {
   width: 100%;
   margin-bottom: 2rem;
+  position: relative;
 }
 
 .form-field input {
@@ -155,6 +157,14 @@ form {
   color: var(--color-white);
   padding: 1.5rem;
   cursor: pointer;
+}
+
+.error-message {
+  color: var(--color-error-message);
+  font-size: 1.4rem;
+  position: absolute;
+  top: -1.5rem;
+  left: 0;
 }
 
 .advertorial-section {
