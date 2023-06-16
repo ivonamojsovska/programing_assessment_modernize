@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Modernize your home</title>
     <link rel="stylesheet" href="css/style.css" />
-    <script src="app.js" defer></script>
   </head>
   <body>
     <header class="header">
@@ -15,80 +14,83 @@
       <!-- header section end -->
     </header>
     <main class="main-section">
-      <h1 class="main-title">
-        Enter to win a 3rd generation Nest<br />
-        Learning Thermostat worth $249.
-      </h1>
-      <form>
-        <!-- Form start here -->
-        <div class="form-field">
-          <!-- Name input field -->
-          <input
-            type="text"
-            name="name"
-            id="name"
-            placeholder="Name"
-            required
-          />
-        </div>
-        <div class="form-field location-container">
-          <div class="form-subfield_city">
-            <!-- City input field -->
-            <input type="text" name="city" placeholder="City" />
-          </div>
-          <div class="form-subfield_state">
-            <!-- State input field -->
+      <div class="main-container">
+        <h1 class="main-title">
+          Enter to win a 3rd generation Nest<br />
+          Learning Thermostat worth $249.
+        </h1>
+        <form>
+          <!-- Form start here -->
+          <div class="form-field">
+            <!-- Name input field -->
             <input
               type="text"
-              name="state"
-              placeholder="State"
-              pattern="[A-Za-z]{2}"
+              name="name"
+              id="name"
+              placeholder="Name"
+              required
             />
           </div>
-        </div>
-        <div class="form-field">
-          <!-- Phone Number input field -->
-          <input
-            id="phone-number"
-            type="tel"
-            name="tel"
-            placeholder="Phone Number"
-            required
-          />
-        </div>
-        <div class="form-field">
-          <!-- Email input field -->
-          <input
-            type="email"
-            name="email"
-            placeholder="Email Address"
-            id="email"
-            required
-          />
-        </div>
-        <button class="submit-button" type="submit">ENTER TO WIN</button>
-        <!-- Form ends here -->
-      </form>
+          <div class="form-field location-container">
+            <div class="form-subfield_city">
+              <!-- City input field -->
+              <input type="text" name="city" placeholder="City" />
+            </div>
+            <div class="form-subfield_state">
+              <!-- State input field -->
+              <input
+                type="text"
+                name="state"
+                placeholder="State"
+                pattern="[A-Za-z]{2}"
+              />
+            </div>
+          </div>
+          <div class="form-field">
+            <!-- Phone Number input field -->
+            <input
+              id="phone-number"
+              type="tel"
+              name="tel"
+              placeholder="Phone Number"
+              required
+            />
+          </div>
+          <div class="form-field">
+            <!-- Email input field -->
+            <input
+              type="email"
+              name="email"
+              placeholder="Email Address"
+              id="email"
+              required
+            />
+          </div>
+          <button class="submit-button" type="submit">ENTER TO WIN</button>
+          <!-- Form ends here -->
+        </form>
+      </div>
     </main>
     <section class="advertorial-section">
       <!-- Advertizing section start -->
-      <h1 class="title-within-border">EVEN MORE SAVINGS</h1>
-      <div class="advertorial-content">
-        <h2 class="advertorial-subheading">ADVERTORIAL</h2>
-        <h1 class="advertorial-heading">
-          Trick Homeowners Use to Eliminate Bills
-        </h1>
-        <p>
-          Surging energy bills, unpredictable weather pattern and
-          dissatisfaction with utility companies have homeowners
-          scrambling...<span class="read-more"
-            ><a href="https://www.google.com/" target="_blank"
+      <div class="advertorial-container">
+        <h2 class="title-within-border">EVEN MORE SAVINGS</h2>
+        <div class="advertorial-content">
+          <h2 class="advertorial-subheading">ADVERTORIAL</h2>
+          <h1 class="advertorial-heading">
+            Trick Homeowners Use to Eliminate Bills
+          </h1>
+          <p>
+            Surging energy bills, unpredictable weather pattern and
+            dissatisfaction with utility companies have homeowners
+            scrambling...<a href="https://www.google.com/" target="_blank"
               >READ MORE</a
-            ></span
-          >
-        </p>
+            >
+          </p>
+        </div>
       </div>
       <!-- Advertizing section end -->
     </section>
+    <script src="app.js" defer></script>
   </body>
 </html>
