@@ -27,7 +27,7 @@ phone.addEventListener('input', (e) => {
 
 ////Change the border color to #D50303 when there is an error in the form's inputs
 
-form.addEventListener('submit', (e) => {
+form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     // Reset error styles
@@ -73,40 +73,40 @@ form.addEventListener('submit', (e) => {
     // Submit the form if there are no errors
     if (!hasError) {
 
-        // Collect form data
-        const formData = new FormData(form);
+        try {
 
-        // Reset the form 
-        //form.reset()
-        // Change button text to "Submitted"
-        //submitButton.textContent = 'SUBMITTED';
-        //submitButton.disabled = true; // Disable the button to prevent further submissions
+            // Collect form data
+            const formData = new FormData(form);
+
+            //Reset the form 
+            //form.reset()
+            //Change button text to "Submitted"
+            //submitButton.textContent = 'SUBMITTED';
+            //submitButton.disabled = true; // Disable the button to prevent further submissions
 
 
-        // Make a POST request to the server
-        fetch('https://formsws-hilstaging-com-0adj9wt8gzyq.runscope.net/solar ', {
-            method: 'POST',
-            body: formData
-        })
-            .then(response => {
-                if (response.ok) {
-                    // Successful submission
-                    console.log('Form submitted successfully');
-                    // Reset the form 
-                    form.reset()
-                    // Change button text to "Submitted"
-                    submitButton.textContent = 'SUBMITTED';
-                    submitButton.disabled = true; // Disable the button to prevent further submissions
-
-                } else {
-                    // Handle errors or unsuccessful submission
-                    console.log('Form submission failed');
-                }
+            // Make a POST request to the server
+            const response = await fetch('https://formsws-hilstaging-com-0adj9wt8gzyq.runscope.net/solar ', {
+                method: 'POST',
+                body: formData
             })
-            .catch(error => {
-                // Handle network errors
-                console.log('An error occurred during form submission:', error);
-            });
+            if (response.ok) {
+                // Successful submission
+                console.log('Form submitted successfully');
+                // Reset the form 
+                form.reset()
+                // Change button text to "Submitted"
+                submitButton.textContent = 'SUBMITTED';
+                submitButton.disabled = true; // Disable the button to prevent further submissions
+
+            } else {
+                // Handle errors or unsuccessful submission
+                console.log('Form submission failed');
+            }
+        } catch (error) {
+            // Handle network errors
+            console.log('An error occurred during form submission:', error);
+        };
     }
 
 });
