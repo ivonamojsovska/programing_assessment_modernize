@@ -108,5 +108,4 @@ form.addEventListener('submit', async (e) => {
             console.log('An error occurred during form submission:', error);
         };
     }
-
 });
