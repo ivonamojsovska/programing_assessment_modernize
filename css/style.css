@@ -56,11 +56,7 @@ html {
 }
 
 body {
-  background: linear-gradient(
-      rgba(255, 255, 255, 1) 10%,
-      rgba(255, 255, 255, 0) 30%
-    ),
-    url("/css/images/background-image.png");
+  background-image: url("/css/images/BG.png");
   animation: backgroundTransition 5s infinite;
 }
 
