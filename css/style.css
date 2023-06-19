@@ -218,8 +218,8 @@ form {
 
 .advertorial-content {
   padding: 1.5rem;
-  margin: 1.5rem;
-  margin-top: 0;
+  margin: 0.5rem 1.5rem 1.5rem;
+
   background-color: rgba(255, 255, 255, 0.75);
 }
 
@@ -255,7 +255,7 @@ form {
   }
 
   .advertorial-content {
-    margin: 0 2rem 2rem;
+    margin: 0.5rem 2rem 2rem;
   }
   .title-within-border::before {
     margin-right: 4rem;
