@@ -57,6 +57,7 @@ html {
 
 body {
   background-image: url("/css/images/BG.png");
+  background-size: contain;
   animation: backgroundTransition 5s infinite;
 }
 
