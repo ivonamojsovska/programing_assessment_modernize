@@ -61,8 +61,6 @@ body {
       rgba(255, 255, 255, 0) 30%
     ),
     url("/css/images/background-image.png");
-
-  background-position: cover;
   animation: backgroundTransition 5s infinite;
 }
 
@@ -163,13 +161,13 @@ form {
   color: var(--color-error-message);
   font-size: 1.4rem;
   position: absolute;
-  top: -1.5rem;
+  bottom: -1.7rem;
   left: 0;
 }
 
 .advertorial-section {
   max-width: 40rem;
-  margin: 0 auto;
+  margin: 0 auto 4rem;
 }
 
 .advertorial-container {
@@ -184,25 +182,29 @@ form {
   position: relative;
   font-size: 1.5rem;
   line-height: 1.5rem;
-  top: -0.9rem;
+  top: -0.7rem;
 }
 
 .title-within-border::before,
 .title-within-border::after {
   content: "";
-  position: absolute;
-  top: 47%;
-  width: 15%;
   height: 2px;
   background-color: var(--color-green);
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+  margin-top: 0.7rem;
+  min-width: 2rem;
 }
 
 .title-within-border::before {
-  left: -2px;
+  margin-right: 2rem;
 }
 
 .title-within-border::after {
-  right: -2px;
+  margin-left: 2rem;
 }
 
 .advertorial-subheading {
@@ -233,6 +235,7 @@ form {
 
 .advertorial-content a {
   color: var(--color-read-more);
+  font-weight: bold;
 }
 
 @keyframes backgroundTransition {
@@ -250,7 +253,14 @@ form {
     margin: 3.5rem auto 4.5rem;
   }
 
+  .advertorial-section {
+    margin: 0 auto 9rem;
+  }
+
   .advertorial-content {
     margin: 0 2rem 2rem;
+  }
+  .advertorial-content a {
+    font-weight: 300;
   }
 }
