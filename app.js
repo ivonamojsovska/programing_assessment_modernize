@@ -27,7 +27,7 @@ phone.addEventListener('input', (e) => {
 
 ////Change the border color to #D50303 when there is an error in the form's inputs
 
-form.addEventListener('submit', async (e) => {
+form.addEventListener('submit', (e) => {
     e.preventDefault();
 
     // Reset error styles
@@ -73,39 +73,39 @@ form.addEventListener('submit', async (e) => {
     // Submit the form if there are no errors
     if (!hasError) {
 
-        try {
+        // try {
 
-            // Collect form data
-            const formData = new FormData(form);
+        // Collect form data
+        const formData = new FormData(form);
 
-            //Reset the form 
-            //form.reset()
-            //Change button text to "Submitted"
-            //submitButton.textContent = 'SUBMITTED';
-            //submitButton.disabled = true; // Disable the button to prevent further submissions
+        //Reset the form 
+        //form.reset()
+        //Change button text to "Submitted"
+        //submitButton.textContent = 'SUBMITTED';
+        //submitButton.disabled = true; // Disable the button to prevent further submissions
 
 
-            // Make a POST request to the server
-            const response = await fetch('https://formsws-hilstaging-com-0adj9wt8gzyq.runscope.net/solar ', {
-                method: 'POST',
-                body: formData
-            })
-            if (response.ok) {
-                // Successful submission
-                console.log('Form submitted successfully');
-                // Reset the form 
-                form.reset()
-                // Change button text to "Submitted"
-                submitButton.textContent = 'SUBMITTED';
-                submitButton.disabled = true; // Disable the button to prevent further submissions
+        // Make a POST request to the server
+        const response = fetch('https://formsws-hilstaging-com-0adj9wt8gzyq.runscope.net/solar ', {
+            method: 'POST',
+            body: formData
+        })
+        // if (response.ok) {
+        // Successful submission
+        console.log('Form submitted successfully');
+        // Reset the form 
+        form.reset()
+        // Change button text to "Submitted"
+        submitButton.textContent = 'SUBMITTED';
+        submitButton.disabled = true; // Disable the button to prevent further submissions
 
-            } else {
-                // Handle errors or unsuccessful submission
-                console.log('Form submission failed');
-            }
-        } catch (error) {
-            // Handle network errors
-            console.log('An error occurred during form submission:', error);
-        };
+        // } else {
+        // Handle errors or unsuccessful submission
+        //     console.log('Form submission failed');
+        // }
+        // } catch (error) {
+        //     // Handle network errors
+        //     console.log('An error occurred during form submission:', error);
+        // };
     }
 });
